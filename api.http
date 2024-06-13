@@ -1,0 +1,27 @@
+GET http://localhost:3000/users HTTP/1.1
+
+###
+GET http://localhost:3000/users/c867fbd7-3f23-4303-9c17-86e6434e5a2f HTTP/1.1
+
+###
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Katia",
+    "email": "katia@email.com"
+}
+###
+POST http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+x-user-id: b06686db-cb60-4b86-bd73-d7e750115af5
+
+{
+    "title": "task #7"
+}
+
+
+###
+POST http://localhost:3000/checkout HTTP/1.1
+x-user-id: b06686db-cb60-4b86-bd73-d7e750115af5
+
